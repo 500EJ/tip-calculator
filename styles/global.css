@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+}
+
+button {
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  transition: background-color 0.2s, color 0.2s;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+
+header {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+input[type="number"] {
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  height: 30px;
+  margin: 0 auto;
+  -moz-appearance: textfield;
+  padding: 20px 10px;
+  text-align: right;
+  width: 100%;
+}
+
+input[type="number"]::placeholder {
+  color: hsl(184, 14%, 56%);
+  text-align: right;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  width: fit-content;
+}
+
+main div {
+  margin-bottom: 10px;
+}
+
+.bill {
+  background: no-repeat 5% center url(../images/icon-dollar.svg);
+}
+
+.calculation {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.calculation-division {
+  color: hsl(184, 14%, 56%);
+  font-size: 14px;
+}
+
+.calculation-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculation-title {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.input-label {
+  color: hsl(186, 14%, 43%);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.logo {
+  margin: 20px auto;
+}
+
+.people {
+  background: no-repeat 5% center url(../images/icon-person.svg);
+}
+
+.percentages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.percentages > button,
+.percentages > input {
+  height: unset;
+  margin: unset;
+  padding: 5px;
+  width: 47%;
+}
+
+.price {
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+}
+
+.reset {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  width: 100%;
+}
+
+button.selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+@media (min-width: 684px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  main {
+    flex-direction: row;
+    padding: 30px 50px;
+  }
+
+  .calculation {
+    width: 50%;
+  }
+
+  .inputs {
+    width: 50%;
+  }
+
+  .percentages > button,
+  .percentages > input {
+    width: 31%;
+  }
+
+  .price {
+    font-size: 30px;
+  }
+}
