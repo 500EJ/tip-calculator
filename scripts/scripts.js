@@ -39,12 +39,18 @@ let people = null;
 let percentage = null;
 
 const updateBill = (newBill) => {
-  bill = newBill && !isNaN(newBill) ? newBill.toFixed(2) : null;
+  bill =
+    newBill && !isNaN(newBill) && newBill <= Number.MAX_SAFE_INTEGER
+      ? newBill.toFixed(2)
+      : null;
   calculatePrices();
 };
 
 const updatePeople = (numPeople) => {
-  people = numPeople && !isNaN(numPeople) && numPeople !== 0 ? numPeople : null;
+  people =
+    numPeople && !isNaN(numPeople) && numPeople <= Number.MAX_SAFE_INTEGER
+      ? numPeople
+      : null;
   calculatePrices();
 };
 
